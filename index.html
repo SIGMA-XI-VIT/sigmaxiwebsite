@@ -293,12 +293,29 @@
             <div><ion-icon name="logo-instagram"></ion-icon><ion-icon name="logo-twitter"></ion-icon><ion-icon name="logo-facebook"></ion-icon><ion-icon name="logo-linkedin"></ion-icon></div>
         </div>
         <div class="one_footer_card4">
-            <form action="#">
-                <p>Join a Newsletter</p>
+            <form action="#" id="email-newsletter" name="email-newsletter">
+                <p>Subscribe to our Newsletter</p>
                 <p>Your Email</p>
-                <input type="email" placeholder="Enter Your Email" required>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                 <div class="pop_up" style="margin: 0 auto ; display: none;">
+                    <p align="center">Subscribed!</p>
+                </div>
                 <button type="submit">Subscribe</button>
             </form>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbx7BD3jk7XlljC1RnoSitf2PSpw4Flh2RpdgcOy17LDKPh91m9xg2vamTFuj5egW4Yp/exec'
+                const form = document.forms['email-newsletter']
+
+                form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', error.message))
+                    document.getElementById("email-newsletter").reset();
+                    document.querySelector(".pop_up").style.display = "flex";
+                });
+                
+            </script>
         </div>
     </div>
     <script src="script.js"></script>
