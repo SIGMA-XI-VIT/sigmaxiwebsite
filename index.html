@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -20,6 +21,7 @@
         rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <!-- <link rel="shortcut icon" href="images/sigmalogowhite.png"> -->
 </head>
 
@@ -27,9 +29,12 @@
     <div class="preloader">
         <div class="main_preloader">
             <div class="one_pre">
-                <img src="images/sigmaxilogo.png">
+                <img src="images/sigmaxilogo.png" id="oops">
             </div>
-            <div class="two_pre"><div class="twopre_inside"></div><div class="threepre_inside"></div></div>
+            <div class="two_pre">
+                <div class="twopre_inside"></div>
+                <div class="threepre_inside"></div>
+            </div>
             <div class="three_pre">
                 <p>Sigma Xi VIT loading up</p>
             </div>
@@ -47,32 +52,65 @@
         </div>
         <div class="right_header">
             <ul>
-                <li><a href="#" id="homelink">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#sigmaxihome" id="homelink">Home</a></li>
+                <li><a href="#arrowredirect" id="aboutuslink">About Us</a></li>
+                <li><a href="#sigmaxievents" id="eventslink">Events</a></li>
+                <li><a href="#sigmaxiblogs" id="blogslink">Blogs</a></li>
+                <li><a href="#sigmaxiteam" id="ourteamlink">Our Team</a></li>
+                <li><a href="#sigmaxifooter" id="contactuslink">Contact Us</a></li>
             </ul>
         </div>
+        <div class="header_respnosive">
+            <ion-icon name="menu" id="showmenuheader"></ion-icon>
+            <ion-icon name="close-circle" id="closemenuheader"></ion-icon>
+        </div>
+        <div class="right_header2">
+            <a href="#sigmaxihome" id="homelink">
+                <ion-icon name="home"></ion-icon>
+                <p>Home</p>
+            </a>
+            <a href="#arrowredirect" id="aboutuslink">
+                <ion-icon name="alert-circle-outline"></ion-icon>
+                <p>About Us</p>
+            </a>
+            <a href="#sigmaxiblogs" id="blogslink">
+                <ion-icon name="logo-medium"></ion-icon>
+                <p>Blogs</p>
+            </a>
+            <a href="#sigmaevents" id="eventslink"><img src="images/eventheader.png">
+                <p>Events</p>
+            </a>
+            <a href="#sigmaxiteam" id="ourteamlink"><i class="fas fa-users"></i>
+                <p>Our Team</p>
+            </a>
+            <a href="#sigmaxifooter" id="contactuslink">
+                <ion-icon name="call" id="phoneicon"></ion-icon>
+                <p>Contact Us</p>
+            </a>
+        </div>
     </div>
-    <div class="main_home">
-        <div class="main_div_home">
+    <div class="left_animation_home" data-aos="slide-right"></div>
+    <div class="right_animation_home" data-aos="slide-left"></div>
+    <div class="main_home" id="sigmaxihome">
+        <div class="main_div_home" data-aos="slide-down">
             <p class="main_heading">SIGMA XI VIT</p>
             <p class="sub_heading">The Scientific Research Society</p>
-            <p style="text-align: center;">Sigma Xi is a Scientific Research Society that aims to provide technical
+            <p id="homedesc">Sigma Xi is a Scientific Research Society that aims to provide technical
                 growth to its members while inculcating qualities of excellent research.</p>
         </div>
-        <div class="arrow">
-            <ion-icon name="arrow-down-outline"></ion-icon>
+        <div class="arrow" data-aos="slide-down">
+            <a href="#arrowredirect">
+                <ion-icon name="arrow-down-outline" id="arrowredirect"></ion-icon>
+            </a>
         </div>
     </div>
+    <div class="gallh abtusheadingresponsive">ABOUT US</div>
     <div class="about_us">
         <div class="left_about_us">
             <img src="images/aboutus.png">
         </div>
         <div class="right_about_us">
-            <p id="abth">ABOUT US</p>
+            <p id="abth" class="dontshow">ABOUT US</p>
             <p id="abtdesc">Sigma Xi, The Scientific Research Honor Society is a non-profit honor society for scientists
                 and engineers which was founded in 1886 at Cornell University by a junior faculty member and a handful
                 of graduate students. Sigma Xi VIT is a student-driven research community at VIT which is established
@@ -90,11 +128,11 @@
             <div class="main_img">
                 <img src="images/gallery_img.png" id="fimg">
             </div>
-            <div class="arrow_gall">
+            <div class="arrow_gall" id="sigmaevents">
                 <ion-icon name="arrow-forward-outline" id="right_arrow_gall" onclick="gorightgall()"></ion-icon>
             </div>
         </div>
-        <div class="bottom_gallery">
+        <div class="bottom_gallery" id="sigmaxievents">
             <img src="images/gallery_img.png" class="bimg" onclick="specialfunc(this.src)">
             <img src="images/gallery_img1.jpg" class="bimg" onclick="specialfunc(this.src)">
             <img src="images/gallery_img2.jpg" class="bimg" onclick="specialfunc(this.src)">
@@ -107,113 +145,135 @@
         </div>
     </div>
     <p class="gallh">EVENTS</p>
-    <div class="events">
-        <div class="events_main">
-            <div class="events_main_main">
-                <div class="one_event">
-                    <img src="images/events1.png">
-                    <div class="llll">
-                        <div class="one_basic">
-                            <p data-target="20" class="counter"></p>
-                            <p>+</p>
+    <section class="allevents">
+        <div class="events">
+            <div class="events_main">
+                <div class="events_main_main">
+                    <div class="one_event">
+                        <img src="images/events1.png">
+                        <div class="llll">
+                            <div class="one_basic">
+                                <p class="counter">20</p>
+                                <p>+</p>
+                            </div>
+                            <p>Experts</p>
                         </div>
-                        <p>Experts</p>
                     </div>
-                </div>
-                <div class="one_line"></div>
-                <div class="one_event">
-                    <img src="images/events2.png">
-                    <div class="llll">
-                        <div class="one_basic">
-                            <p data-target="40" class="counter"></p>
-                            <p>+</p>
+                    <div class="one_line"></div>
+                    <div class="one_event">
+                        <img src="images/events2.png">
+                        <div class="llll">
+                            <div class="one_basic">
+                                <p class="counter">40</p>
+                                <p>+</p>
+                            </div>
+                            <p>Events</p>
                         </div>
-                        <p>Events</p>
                     </div>
-                </div>
-                <div class="one_line"></div>
-                <div class="one_event">
-                    <img src="images/events3.png">
-                    <div class="llll">
-                        <div class="one_basic">
-                            <p data-target="5000" class="counter"></p>
-                            <p>+</p>
+                    <div class="one_line"></div>
+                    <div class="one_event">
+                        <img src="images/events3.png">
+                        <div class="llll">
+                            <div class="one_basic">
+                                <p class="counter">5000</p>
+                                <p>+</p>
+                            </div>
+                            <p>Participants</p>
                         </div>
-                        <p>Participants</p>
                     </div>
-                </div>
-                <div class="one_line"></div>
-                <div class="one_event">
-                    <img src="images/events4.png">
-                    <div class="llll">
-                        <div class="one_basic">
-                            <p data-target="5" class="counter"></p>
-                            <p>+</p>
+                    <div class="one_line"></div>
+                    <div class="one_event">
+                        <img src="images/events4.png">
+                        <div class="llll">
+                            <div class="one_basic">
+                                <p class="counter">5</p>
+                                <p>+</p>
+                            </div>
+                            <p>Years</p>
                         </div>
-                        <p>Years</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="events_menu">
-        <select id="eventselect">
-            <option value="20212022" selected>2021-2022</option>
-            <option value="20202021">2020-2021</option>
-            <option value="20192020">2019-2020</option>
-            <option value="20182019">2018-2019</option>
-        </select>
-    </div>
-    <div class="main_events_showcase">
-        <div class="main_main_events_showcase">
-            <div class="card_event_showcase">
-                <img src="images/researchgateway.png">
-                <div class="one_card">
-                    <p>Research</p>
-                    <p>6th November 2021</p>
-                </div>
-                <p class="heading_event_showcase">Research Gateway</p>
-                <p class="event_desc_showcase">Sigma Xi is here for you with an event, Research Gateway, to guide you in
-                    giving your research career a kickstart. The event will provide an in-depth idea of diverse aspects
-                    of research.</p>
+        <div class="events_menu">
+            <select id="eventselect">
+                <option value="20212022" selected>2021-2022</option>
+                <option value="20202021">2020-2021</option>
+                <option value="20192020">2019-2020</option>
+                <option value="20182019">2018-2019</option>
+            </select>
+        </div>
+        <div class="main_events_showcase">
+            <div class="fulleventinfo">
+
+
             </div>
-            <div class="card_event_showcase">
-                <img src="images/gcm_devansh.png">
-                <div class="one_card">
-                    <p>Open Source</p>
-                    <p>10th October 2021</p>
+            <div class="main_main_events_showcase">
+                <div class="card_event_showcase" onclick="showfull(this,funcccc())">
+                    <img src="images/researchgateway.png">
+                    <div class="one_card">
+                        <p>Research</p>
+                        <p>6th November 2021</p>
+                    </div>
+                    <div class="right_event">
+                        <p class="heading_event_showcase">Research Gateway</p>
+                        <p class="event_desc_showcase">Sigma Xi is here for you with an event, Research Gateway, to
+                            guide
+                            you in giving your research career a kickstart. The event will provide an in-depth idea of
+                            diverse
+                            aspects of research.</p>
+                    </div>
                 </div>
-                <p class="heading_event_showcase">Git Commit Merge X Hacktober Fest 2021</p>
-                <p class="event_desc_showcase">A promising session on GitHub and its benefits, for all the coders and
-                    aspiring coders out there! How to kick off your own journey on it, along with a step by step guide
-                    on how to get going with it.</p>
-            </div>
-            <div class="card_event_showcase">
-                <img src="images/counttofiveg.png">
-                <div class="one_card">
-                    <p>5G Technology</p>
-                    <p>2nd October 2021</p>
+                <div class="card_event_showcase dontshow" onclick="showfull(this,funcccc())">
+                    <img src="images/gcm_devansh.png">
+                    <div class="one_card">
+                        <p>Open Source</p>
+                        <p>10th October 2021</p>
+                    </div>
+                    <div class="right_event">
+                        <p class="heading_event_showcase">Git Commit Merge X Hacktober Fest 2021</p>
+                        <p class="event_desc_showcase">A promising session on GitHub and its benefits, for all the
+                            coders
+                            and
+                            aspiring coders out there! How to kick off your own journey on it, along with a step by step
+                            guide
+                            on how to get going with it.</p>
+                    </div>
                 </div>
-                <p class="heading_event_showcase">Count to 5G</p>
-                <p class="event_desc_showcase">Count to 5G, a seminar on the evolution of 5G in an attempt to understand
-                    this journey. A journey that we deem important for it has led to the betterment of humans through
-                    the power of networking. </p>
-            </div>
-            <div class="card_event_showcase">
-                <img src="images/rendezvous.png">
-                <div class="one_card">
-                    <p>Research</p>
-                    <p> 29th August 2021</p>
+                <div class="card_event_showcase dontshow" onclick="showfull(this,funcccc())">
+                    <img src="images/counttofiveg.png">
+                    <div class="one_card">
+                        <p>5G Technology</p>
+                        <p>2nd October 2021</p>
+                    </div>
+                    <div class="right_event">
+                        <p class="heading_event_showcase">Count to 5G</p>
+                        <p class="event_desc_showcase">Count to 5G, a seminar on the evolution of 5G in an attempt to
+                            understand
+                            this journey. A journey that we deem important for it has led to the betterment of humans
+                            through
+                            the power of networking. </p>
+                    </div>
                 </div>
-                <p class="heading_event_showcase">Rendezvous : The Research Stream Ep 1</p>
-                <p class="event_desc_showcase">Sigma Xi presents the first episode of Rendezvous: The Research Stream.
-                    Anshuman Acharya joining us to inspire the young minds with his past research work, current
-                    objectives and future ideas.</p>
+                <div class="card_event_showcase dontshow" onclick="showfull(this,funcccc())">
+                    <img src="images/rendezvous.png">
+                    <div class="one_card">
+                        <p>Research</p>
+                        <p> 29th August 2021</p>
+                    </div>
+                    <div class="right_event">
+                        <p class="heading_event_showcase">Rendezvous : The Research Stream Ep 1</p>
+                        <p class="event_desc_showcase">Sigma Xi presents the first episode of Rendezvous: The Research
+                            Stream.
+                            Anshuman Acharya joining us to inspire the young minds with his past research work, current
+                            objectives and future ideas.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="showmorediv">
-        <button>Show more</button>
+    </section>
+    <div class="showmorediv" id="sigmaxiblogs">
+        <a href="allevents.html"><button>Show more</button></a>
     </div>
     <p class="gallh">PUBLICATIONS</p>
     <div class="publications">
@@ -228,10 +288,11 @@
                 <p class="publication_desc">From your residence to your workplace, from simple tasks such as ordering a
                     meal to crucial laws and
                     treaties that keep our world in order, we are reliant on words.....</p>
-                <a href=""><button>Read more</button></a>
+                <a href="https://medium.com/sigma-xi-vit/all-about-words-42c85933d4be" target="_blank"><button>Read
+                        more</button></a>
             </div>
         </div>
-        <div class="card_publications">
+        <div class="card_publications dontshow">
             <img src="images/publication2.png">
             <div class="right_publications">
                 <p class="heading_publication">CRISPR : A Gene Editing Tool</p>
@@ -242,10 +303,11 @@
                 <p class="publication_desc">When we see the term immortality, the first thing that hits our minds is the
                     thousand-year-old vampires, from twilight being all youthful with their baby-like skin making us
                     wonder....</p>
-                <a href=""><button>Read more</button></a>
+                <a href="https://medium.com/sigma-xi-vit/crispr-a-gene-editing-tool-db91753e3d6e"
+                    target="_blank"><button>Read more</button></a>
             </div>
         </div>
-        <div class="card_publications">
+        <div class="card_publications dontshow">
             <img src="images/publication3.png">
             <div class="right_publications">
                 <p class="heading_publication">Unity Game Engine: Why is it the better option for beginners?</p>
@@ -255,10 +317,11 @@
                 </div>
                 <p class="publication_desc">Hundreds and thousands of video games exist in today’s world which cater to
                     everyone’s palette, but what distinguishes......</p>
-                <a href=""><button>Read more</button></a>
+                <a href="https://medium.com/sigma-xi-vit/unity-game-engine-why-it-is-the-better-option-for-beginners-3a192feabecb"
+                    target="_blank"><button>Read more</button></a>
             </div>
         </div>
-        <div class="card_publications">
+        <div class="card_publications dontshow">
             <img src="images/publication4.png">
             <div class="right_publications">
                 <p class="heading_publication">Anti-microbial Resistance</p>
@@ -268,57 +331,224 @@
                 </div>
                 <p class="publication_desc">An antimicrobial is an agent that kills microorganisms or stops their
                     growth. Antimicrobial medicines can be grouped according to the.....</p>
-                <a href=""><button>Read more</button></a>
+                <a href="https://medium.com/sigma-xi-vit/anti-microbial-resistance-97ae61e77581"
+                    target="_blank"><button>Read more</button></a>
             </div>
         </div>
     </div>
-    <div class="showmorediv">
+    <div class="showmorediv" id="sigmaxiteam">
         <a href="allblogs.html"><button id="showmoreblogs">Show more</button></a>
     </div>
-    
-    <p class="gallh">OUR TEAM</p>
-    <!-- OUR TEAM -->
+
+    <section class="our_team_section">
+        <p class="gallh">OUR TEAM</p>
+        <div class="events_menu teammenu" style="margin:4vh 0px">
+            <select id="teamselect">
+                <option value="20212022" selected>2021-2022</option>
+                <option value="20202021">2020-2021</option>
+                <option value="20192020">2019-2020</option>
+                <option value="20182019">2018-2019</option>
+            </select>
+        </div>
+        <div class="coordinator">
+            <div class="card_our_team">
+                <img src="images/team1.png">
+                <div>
+                    <p class="heading_div_team">Prof. Akella Sivaramakrishna</p>
+                    <p class="role_our_team">Faculty Coordinator</p>
+                </div>
+            </div>
+        </div>
+        <div class="our_team">
+            <div class="our_team_main">
+                <div class="card_our_team">
+                    <img src="images/team2.png">
+                    <a href="">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">Reva Munish</p>
+                        <p class="role_our_team">Chairperson</p>
+                    </div>
+                </div>
+                <div class="card_our_team">
+                    <img src="images/team1.png">
+                    <a href="">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">Samabrita Biswas</p>
+                        <p class="role_our_team">Secretary</p>
+                    </div>
+                </div>
+                <div class="card_our_team">
+                    <img src="images/team3.png">
+                    <a href="https://www.linkedin.com/in/vaibhav-dhirendra">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/vaibhav_dh/" target="_blank">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">Vaibhav Dhirendra</p>
+                        <p class="role_our_team">Vice - Chairperson</p>
+                    </div>
+                </div>
+                <div class="card_our_team">
+                    <img src="images/team4.png">
+                    <a href="">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">Vivek Sinha</p>
+                        <p class="role_our_team">Program Chair</p>
+                    </div>
+                </div>
+                <div class="card_our_team">
+                    <img src="images/team2.png">
+                    <a href="">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">Priyanshu Raj</p>
+                        <p class="role_our_team">Technical Chair</p>
+                    </div>
+                </div>
+                <div class="card_our_team">
+                    <img src="images/team1.png">
+                    <a href="">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">Poornesh Aaditya</p>
+                        <p class="role_our_team">Technical Chair</p>
+                    </div>
+                </div>
+                <div class="card_our_team">
+                    <img src="images/team3.png">
+                    <a href="">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">Anish Pattnaik</p>
+                        <p class="role_our_team">Design Chair</p>
+                    </div>
+                </div>
+                <div class="card_our_team">
+                    <img src="images/team4.png">
+                    <a href="">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">Shakthi T</p>
+                        <p class="role_our_team">Editorial Chair</p>
+                    </div>
+                </div>
+                <div class="dontcareteam"></div>
+                <div class="card_our_team">
+                    <img src="images/team1.png">
+                    <a href="">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">Satyam Padhi</p>
+                        <p class="role_our_team">Graphic Designer</p>
+                    </div>
+                </div>
+                <div class="card_our_team" id="sigmaxifooter">
+                    <img src="images/team4.png">
+                    <a href="">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">Somil Kuchhal</p>
+                        <p class="role_our_team">Finance Chair</p>
+                    </div>
+                </div>
+                <div class="dontcareteam"></div>
+            </div>
+        </div>
+    </section>
     <div class="footer_sigmaxi">
         <div class="one_footer_card1">
             <img src="images/sigmalogowhite.png">
-            <p>Sigma Xi is a Scientific Research Society that aims to provide technical growth to its members while inculcating qualities of excellent research.</p>
+            <p>Sigma Xi is a Scientific Research Society that aims to provide technical growth to its members while
+                inculcating qualities of excellent research.</p>
         </div>
         <div class="one_footer_card2">
             <p>Get in Touch</p>
-            <div><ion-icon name="mail-outline"></ion-icon>sigmaxi@vit.ac.in</div>
-            <div><ion-icon name="call-outline"></ion-icon>+91 9884210067</div>
+            <div>
+                <ion-icon name="mail-outline"></ion-icon>sigmaxi@vit.ac.in
+            </div>
+            <div>
+                <ion-icon name="call-outline"></ion-icon>+91 9884210067
+            </div>
         </div>
         <div class="one_footer_card3">
             <p>Social Media</p>
-            <div><ion-icon name="logo-instagram"></ion-icon><ion-icon name="logo-twitter"></ion-icon><ion-icon name="logo-facebook"></ion-icon><ion-icon name="logo-linkedin"></ion-icon></div>
+            <div>
+                <a href="" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="" target="_blank">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a href="" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
         </div>
         <div class="one_footer_card4">
-            <form action="#" id="email-newsletter" name="email-newsletter">
-                <p>Subscribe to our Newsletter</p>
-                <p>Your Email</p>
-                <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
-                 <div class="pop_up" style="margin: 0 auto ; display: none;">
-                    <p align="center">Subscribed!</p>
-                </div>
+            <form action="#">
+                <p class="centerresponsive">Join a Newsletter</p>
+                <p id="youremail">Your Email</p>
+                <input type="email" placeholder="Enter Your Email" required>
                 <button type="submit">Subscribe</button>
             </form>
-            <script>
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbx7BD3jk7XlljC1RnoSitf2PSpw4Flh2RpdgcOy17LDKPh91m9xg2vamTFuj5egW4Yp/exec'
-                const form = document.forms['email-newsletter']
-
-                form.addEventListener('submit', e => {
-                    e.preventDefault()
-                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                    .then(response => console.log('Success!', response))
-                    .catch(error => console.error('Error!', error.message))
-                    document.getElementById("email-newsletter").reset();
-                    document.querySelector(".pop_up").style.display = "flex";
-                });
-                
-            </script>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 80,
+            delay: 500,
+            once: false,
+            mirror: true,
+        });
+    </script>
+
 </body>
 
 </html>

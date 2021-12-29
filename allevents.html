@@ -1,176 +1,92 @@
-var fff = document.body;
-fff.style.height = "100vh";
-fff.style.width = "100vw";
-fff.style.position = "absolute";
-fff.style.left = "0";
-fff.style.top = "0";
-fff.style.overflow = "hidden";
-const prefunc = () => {
-    setTimeout(() => {
-        document.querySelector(".main_preloader").style.display = "none";
-        document.querySelector(".main_preloader2").style.display = "flex";
-    }, 2010);
-    setTimeout(() => {
-        document.querySelector(".main_preloader2").style.display = "none";
-        document.querySelector(".main_preloader3").style.display = "flex";
-    }, 2400);
-    setTimeout(() => {
-        document.querySelector(".main_preloader3").style.display = "none";
-        document.querySelector(".main_preloader").style.display = "flex";
-        // console.log("times");
-        prefunc();
-    }, 3200);
-};
+<!DOCTYPE html>
+<html lang="en">
 
-prefunc();
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Events</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        @media(max-width:800px) {
+            .main_main_thing_fulleventinfo {
+                width: 75vw;
+                height: max-content;
+                flex-direction: column;
+                margin-top: 4vh;
+            }
 
-const funcccc = () => {
-    fff.style.height = "unset";
-    fff.style.width = "unset";
-    fff.style.overflowY = "unset";
-    fff.style.position = "unset";
-    fff.style.left = "unset";
-    fff.style.top = "unset";
-};
+            .main_thing_fulleventinfo {
+                height: max-content;
+            }
 
-// const funcc2 = () =>{
-//     document.querySelector(".main_div_home").style.animationDuration = "0.5s";
-//     document.querySelector(".arrow").style.animationDuration = "0.5s";
-//     // setTimeout(() => {
-//     //     document.querySelector('.leftanimation1').style.display="none";
-//     //     document.querySelector(".leftanimation2").style.display="none";
-//     //     document.querySelector(".main_home").style.background = "url('images/homebg2.png')";
-//     //     document.querySelector(".main_home").style.backgroundSize = "100% 100%";
-//     // },1000);
-// };
+            .main_main_thing_fulleventinfo img {
+                height: 22vh;
+                width: 100%;
+            }
+            .right_tagdate p{
+                font-size: smaller;
+            }
+            .ri
+            .desc_full{
+                padding-left: 4%;
+                font-size: small;
+                padding-bottom: 5vh;
+            }
 
-const allfunc = window.addEventListener("load", () => {
-    clearTimeout();
-    document.querySelector(".preloader").style.display = "none";
-    funcccc();
-    // funcc2();
-});
-
-
-document.querySelector(".main_home").addEventListener("mouseover", () => {
-    let xyzabc = document.getElementById("homelink");
-    xyzabc.classList.add("current");
-});
-
-document.querySelector(".main_home").addEventListener("mouseleave", () => {
-    let xyzabc = document.getElementById("homelink");
-    xyzabc.classList.remove("current");
-});
-
-document.querySelector(".about_us").addEventListener("mouseover", () => {
-    let xyzabc = document.getElementById("aboutuslink");
-    xyzabc.classList.add("current");
-});
-
-document.querySelector(".about_us").addEventListener("mouseleave", () => {
-    let xyzabc = document.getElementById("aboutuslink");
-    xyzabc.classList.remove("current");
-});
-
-document.querySelector(".allevents").addEventListener("mouseover", () => {
-    let xyzabc = document.getElementById("eventslink");
-    xyzabc.classList.add("current");
-});
-
-document.querySelector(".allevents").addEventListener("mouseleave", () => {
-    let xyzabc = document.getElementById("eventslink");
-    xyzabc.classList.remove("current");
-});
-
-document.querySelector(".publications").addEventListener("mouseover", () => {
-    let xyzabc = document.getElementById("blogslink");
-    xyzabc.classList.add("current");
-});
-
-document.querySelector(".publications").addEventListener("mouseleave", () => {
-    let xyzabc = document.getElementById("blogslink");
-    xyzabc.classList.remove("current");
-});
-
-document
-    .querySelector(".our_team_section")
-    .addEventListener("mouseover", () => {
-        let xyzabc = document.getElementById("ourteamlink");
-        xyzabc.classList.add("current");
-    });
-
-document
-    .querySelector(".our_team_section")
-    .addEventListener("mouseleave", () => {
-        let xyzabc = document.getElementById("ourteamlink");
-        xyzabc.classList.remove("current");
-    });
-document.querySelector(".footer_sigmaxi").addEventListener("mouseover", () => {
-    let xyzabc = document.getElementById("contactuslink");
-    xyzabc.classList.add("current");
-});
-
-document.querySelector(".footer_sigmaxi").addEventListener("mouseleave", () => {
-    let xyzabc = document.getElementById("contactuslink");
-    xyzabc.classList.remove("current");
-});
-
-
-
-var bigimg = document.getElementById("fimg");
-var imgarr = document.querySelectorAll(".bimg");
-var arrimglinks = [];
-for (let x of imgarr) {
-    arrimglinks.push(x.src);
-}
-var count_gall = 0;
-const specialfunc = (linkofimg) => {
-    bigimg.src = linkofimg;
-};
-
-const goleftgall = () => {
-    let r = 0;
-    for (let x in arrimglinks) {
-        if (arrimglinks[x] == bigimg.src) {
-            r = x;
-            break;
+            .heading_full {
+                padding-left: 4%;
+                font-size: unset;
+            }
         }
-    }
-    if (r >= 1) {
-        r--;
-        bigimg.src = arrimglinks[r];
-    }
-};
+    </style>
+</head>
 
-const gorightgall = () => {
-    let r = 0;
-    for (let x in arrimglinks) {
-        if (arrimglinks[x] == bigimg.src) {
-            r = x;
-            break;
-        }
-    }
-    if (r <= 7) {
-        r++;
-        bigimg.src = arrimglinks[r];
-    }
-};
-
-document.getElementById("showmenuheader").addEventListener("click", () => {
-    document.getElementById("showmenuheader").style.display = "none";
-    document.getElementById("closemenuheader").style.display = "unset";
-    document.querySelector(".right_header2").style.display = "flex";
-});
-
-document.getElementById("closemenuheader").addEventListener("click", () => {
-    document.getElementById("closemenuheader").style.display = "none";
-    document.getElementById("showmenuheader").style.display = "unset";
-    document.querySelector(".right_header2").style.display = "none";
-});
-
-var jsonstring1 = `{
+<body>
+    <div class="header_all_blogs">
+        <div class="aaaaalalalal">
+            <div class="left_abcd">
+                <img src="images/sigmalogowhite.png">
+            </div>
+            <div class="right_abcd">
+                <button id="header_go_back_btn_events">Go Back</button>
+            </div>
+        </div>
+    </div>
+    <p class="gallh" id="allevnets">ALL EVENTS</p>
+    <div class="events_menu">
+        <select id="eventselect">
+            <option value="20212022" selected>2021-2022</option>
+            <option value="20202021">2020-2021</option>
+            <option value="20192020">2019-2020</option>
+            <option value="20182019">2018-2019</option>
+        </select>
+    </div>
+    <div class="main_events_showcase2">
+        <div class="fulleventinfo">
+        </div>
+        <div class="main_main_events_showcase1">
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var jsonstring1 = `{
     "obj1":{
         "imglink":"images/researchgateway.png",
+        "imglink2": "images/responsive/researchgateway.png",
         "tag":"Research",
         "date":"6th November 2021",
         "heading":"Research Gateway",
@@ -178,6 +94,7 @@ var jsonstring1 = `{
     },
     "obj2":{
         "imglink":"images/gcm_devansh.png",
+        "imglink2":"images/responsive/gcm.png",
         "tag":"Open Source",
         "date":"10th October 2021",
         "heading":"Git Commit Merge X Hacktober Fest 2021",
@@ -185,6 +102,7 @@ var jsonstring1 = `{
     },
     "obj3":{
         "imglink":"images/counttofiveg.png",
+        "imglink2":"images/responsive/countto5g.png",
         "tag":"5G Technology",
         "date":"2nd October 2021",
         "heading":"Count to 5G",
@@ -192,6 +110,7 @@ var jsonstring1 = `{
     },
     "obj4":{
         "imglink":"images/rendezvous.png",
+        "imglink2":"images/responsive/rendezvous.png",
         "tag":"Research",
         "date":"29th August 2021",
         "heading":"Rendezvous : The Research Stream Ep 1",
@@ -199,6 +118,7 @@ var jsonstring1 = `{
     },
     "obj5":{
         "imglink":"images/gradience.png",
+        "imglink2":"images/responsive/gradience.png",
         "tag":"UI/UX",
         "date":"20th August 2021",
         "heading":"Gradience",
@@ -206,6 +126,7 @@ var jsonstring1 = `{
     },
     "obj6":{
         "imglink":"images/bioverse.png",
+        "imglink2":"images/responsive/bioverse.png",
         "tag":"Bioprocessing",
         "date":"29th May 2021",
         "heading":"Bioverse",
@@ -213,6 +134,7 @@ var jsonstring1 = `{
     },
     "obj7":{
         "imglink":"images/outworlds.png",
+        "imglink2":"images/responsive/outerworlds.png",
         "tag":"Astrophysics",
         "date":"21st March 2021",
         "heading":"Outerworlds",
@@ -220,15 +142,17 @@ var jsonstring1 = `{
     },
     "obj8":{
         "imglink":"images/incryptus.png",
+        "imglink2":"images/responsive/incryptus.png",
         "tag":"Open Source",
         "date":"13th February 2021",
         "heading":"Incryptus",
         "desc":"Incryptus, a one-stop solution to all of your questions. From the humble beginnings of distributed ledgers and the birth of blockchain as a concept, explore what makes this form of currency so unique."
     }
 }`;
-var jsonstring2 = `{
+        var jsonstring2 = `{
     "obj1":{
         "imglink":"images/researchunplugged.png",
+        "imglink2":"images/responsive/researchunplugged.png",
         "tag":"Research",
         "date":"16th November 2020",
         "heading":"Research Unplugged",
@@ -236,6 +160,7 @@ var jsonstring2 = `{
     },
     "obj2":{
         "imglink":"images/trendinganaltyics.png",
+        "imglink2":"images/responsive/trendinganalytics.png",
         "tag":"Data Analytics",
         "date":"8th November 2020",
         "heading":"Trending Analytics",
@@ -243,6 +168,7 @@ var jsonstring2 = `{
     },
     "obj3":{
         "imglink":"images/matrixexpo.png",
+        "imglink2":"images/responsive/matrixexponention.png",
         "tag":"Competitive Coding",
         "date":"17th October 2020",
         "heading":"Matrix Exponentiation",
@@ -250,6 +176,7 @@ var jsonstring2 = `{
     },
     "obj4":{
         "imglink":"images/latexpo.png",
+        "imglink2":"images/responsive/latexpo.png",
         "tag":"Research Tools",
         "date":"30th September 2020",
         "heading":"LaTeXpo",
@@ -257,6 +184,7 @@ var jsonstring2 = `{
     },
     "obj5":{
         "imglink":"images/breakin.png",
+        "imglink2":"images/responsive/breakin.png",
         "tag":"Cybersecurity",
         "date":"6th September 2020",
         "heading":"Break In",
@@ -264,6 +192,7 @@ var jsonstring2 = `{
     },
     "obj6":{
         "imglink":"images/roadmaptosuccess.png",
+        "imglink2":"images/responsive/roadmaptosuccess.png",
         "tag":"Placement",
         "date":"22nd August 2020",
         "heading":"Roadmap To Success",
@@ -271,6 +200,7 @@ var jsonstring2 = `{
     },
     "obj7":{
         "imglink":"images/kickstartux.png",
+        "imglink2":"images/responsive/kickstartux.png",
         "tag":"UI/UX",
         "date":"19th July 2020",
         "heading":"KickStart-UX",
@@ -278,6 +208,7 @@ var jsonstring2 = `{
     },
     "obj8":{
         "imglink":"images/timetoreact.png",
+        "imglink2":"images/responsive/timetoreact.png",
         "tag":"Web development",
         "date":"29th June 2020",
         "heading":"Time to React",
@@ -285,6 +216,7 @@ var jsonstring2 = `{
     },
     "obj9":{
         "imglink":"images/healthcareai.png",
+        "imglink2":"images/responsive/healthcareui.png",
         "tag":"Artificial Intelligence",
         "date":"20th June 2020",
         "heading":"Revolutionizing Healthcare with AI",
@@ -292,6 +224,7 @@ var jsonstring2 = `{
     },
     "obj10":{
         "imglink":"images/timemachinequarantine.png",
+        "imglink2":"images/responsive/timemachineinquarantine.png",
         "tag":"Machine Learning",
         "date":"15th May 2020",
         "heading":"Tame Machine in Quarantine",
@@ -299,15 +232,17 @@ var jsonstring2 = `{
     },
     "obj11":{
         "imglink":"images/scientastic3.png",
+        "imglink2":"images/responsive/scientastic3.png",
         "tag":"Outreach",
         "date":"22nd February 2020",
         "heading":"Scientastic 3.0",
         "desc":"The event was an interactive session with the students of various  School of classes VI and VII in which the members of the Chapter interacted with the students and the activities conducted by the Chapter engaged the students and kept them on their toes throughout the session."
     }
 }`;
-var jsonstring3 = `{
+        var jsonstring3 = `{
     "obj1":{
         "imglink":"images/datawizard.png",
+        "imglink2":"images/responsive/datawizard.png",
         "tag":"Machine Learning",
         "date":"16th October 2019",
         "heading":"Data Wizard",
@@ -315,6 +250,7 @@ var jsonstring3 = `{
     },
     "obj2":{
         "imglink":"images/speechtoaction.png",
+        "imglink2":"images/responsive/speechtoaction.png",
         "tag":"Internet of Things",
         "date":"22nd September 2019",
         "heading":"Speech to Action",
@@ -322,6 +258,7 @@ var jsonstring3 = `{
     },
     "obj3":{
         "imglink":"images/facemoji.png",
+        "imglink2":"images/responsive/facemoji.png",
         "tag":"Machine Learning",
         "date":"21st September 2019",
         "heading":"FACEMOJI",
@@ -329,6 +266,7 @@ var jsonstring3 = `{
     },
     "obj4":{
         "imglink":"images/configurechatbot.png",
+        "imglink2":"images/responsive/conchatbot.png",
         "tag":"Artificial Intelligence",
         "date":"11th September 2019",
         "heading":"Configure Chatbot",
@@ -336,6 +274,7 @@ var jsonstring3 = `{
     },
     "obj5":{
         "imglink":"images/sensorexplore.png",
+        "imglink2":"images/responsive/sensorexplore.png",
         "tag":"Electronics",
         "date":"24th August 2019",
         "heading":"Sensor Explore 1.0",
@@ -343,6 +282,7 @@ var jsonstring3 = `{
     },
     "obj6":{
         "imglink":"images/netcom.png",
+        "imglink2":"images/responsive/ntecomm.png",
         "tag":"Computer Networks",
         "date":"7th August 2019",
         "heading":"Netcomm 1.0",
@@ -350,6 +290,7 @@ var jsonstring3 = `{
     },
     "obj7":{
         "imglink":"images/analofiot.png",
+        "imglink2":"images/responsive/naiot.png",
         "tag":"Internet of Things",
         "date":"20th March 2019",
         "heading":"Nuanced Analysis of Internet of Things",
@@ -357,6 +298,7 @@ var jsonstring3 = `{
     },
     "obj8":{
         "imglink":"images/outreach19.png",
+        "imglink2":"images/responsive/outreach.png",
         "tag":"Outreach",
         "date":"28th February 2019",
         "heading":"Outreach’19",
@@ -364,6 +306,7 @@ var jsonstring3 = `{
     },
     "obj9":{
         "imglink":"images/divedeeptoos.png",
+        "imglink2":"images/responsive/diveopensource.png",
         "tag":"Open Source",
         "date":"20th February 2019",
         "heading":"Deep Dive to Open Source",
@@ -371,6 +314,7 @@ var jsonstring3 = `{
     },
     "obj10":{
         "imglink":"images/devicenmaster.png",
+        "imglink2":"images/responsive/devicenmaster.png",
         "tag":"Software Development",
         "date":"6th February 2019",
         "heading":"Device n Master",
@@ -378,6 +322,7 @@ var jsonstring3 = `{
     },
     "obj11":{
         "imglink":"images/dreamteam.png",
+        "imglink2":"images/responsive/dreamteam.png",
         "tag":"Riviera",
         "date":"7th January 2019",
         "heading":"Dream Team",
@@ -385,9 +330,10 @@ var jsonstring3 = `{
     }
     
 }`;
-var jsonstring4 = `{
+        var jsonstring4 = `{
     "obj1":{
         "imglink":"images/stepstoml.png",
+        "imglink2":"images/responsive/stepstoml.png",
         "tag":"Machine Learning",
         "date":"20th December 2018",
         "heading":"Steps to Machine Learning",
@@ -395,6 +341,7 @@ var jsonstring4 = `{
     },
     "obj2":{
         "imglink":"images/annetwork.png",
+        "imglink2":"images/responsive/neuralnetworks.png",
         "tag":"Deep Learning",
         "date":"24th October 2018",
         "heading":"Artificial Neural Network",
@@ -402,6 +349,7 @@ var jsonstring4 = `{
     },
     "obj3":{
         "imglink":"images/quantumen.png",
+        "imglink2":"images/responsive/quantumentaglemnet.png",
         "tag":"Quantum Mechanics",
         "date":"10th October 2018",
         "heading":"Quantum Entanglement",
@@ -409,6 +357,7 @@ var jsonstring4 = `{
     },
     "obj4":{
         "imglink":"images/facemoji2018.png",
+        "imglink2":"images/responsive/facemoji2018.png",
         "tag":"Machine Learning",
         "date":"9th September 2018",
         "heading":"FACEMOJI",
@@ -416,6 +365,7 @@ var jsonstring4 = `{
     },
     "obj5":{
         "imglink":"images/plantifier.png",
+        "imglink2":"images/responsive/plantifier.png",
         "tag":"Electronics",
         "date":"8th September 2018",
         "heading":"Plantifier",
@@ -423,6 +373,7 @@ var jsonstring4 = `{
     },
     "obj6":{
         "imglink":"images/aero18.png",
+        "imglink2":"images/responsive/aero18.png",
         "tag":"Aerodynamics",
         "date":"1st August 2018",
         "heading":"Aero 18",
@@ -430,6 +381,7 @@ var jsonstring4 = `{
     },
     "obj7":{
         "imglink":"images/ideastoinnovate.png",
+        "imglink2":"images/responsive/ideastoinnovate.png",
         "tag":"Research",
         "date":"28th March 2018",
         "heading":"Ideas To Innovate",
@@ -437,6 +389,7 @@ var jsonstring4 = `{
     },
     "obj8":{
         "imglink":"images/artofrap.png",
+        "imglink2":"images/responsive/artofresearch.png",
         "tag":"Research",
         "date":"14th March 2018",
         "heading":"Art of Research And Publication",
@@ -444,6 +397,7 @@ var jsonstring4 = `{
     },
     "obj9":{
         "imglink":"images/interactivereasearchersmeet.png",
+        "imglink2":"images/responsive/interactivemeet.png",
         "tag":"Research",
         "date":"24th February 2018",
         "heading":"Interactive Researchers’ Meet 1.0 ",
@@ -452,110 +406,224 @@ var jsonstring4 = `{
     
 }`;
 
-$("#eventselect").change(() => {
-    $(".main_main_events_showcase").empty();
-    let count1 = 0;
-    if ($("#eventselect").val() == "20212022") {
-        var obj = JSON.parse(jsonstring1);
-        for (let x in obj) {
-            if (count1 >= 4) {
-                break;
+        $("#header_go_back_btn_events").click(() => {
+            window.history.back();
+        });
+        $(".main_main_events_showcase1").empty();
+        if ($("#eventselect").val() == "20212022") {
+            var obj = JSON.parse(jsonstring1);
+            for (let x in obj) {
+                $(".main_main_events_showcase1").append(`
+                        <div class="card_event_showcase2" onclick="showfull(this,funcccc())">
+                            <img src="${obj[x].imglink}" class="laptop">
+                <img src="${obj[x].imglink2}" class="phone">
+                <div class="one_card2">
+                    <p>${obj[x].tag}</p>
+                    <p>${obj[x].date}</p>
+                </div>
+                <div class="right_event2">
+                    <p class="heading_event_showcase2">${obj[x].heading}</p>
+                    <p class="event_desc_showcase2">${obj[x].desc}</p>
+                </div>
+                <div class="responsivedate">
+                    <p class="diffcolor">${obj[x].tag}</p>
+                    <div><p>${obj[x].heading}</p>
+                    <p class="diffcolor">${obj[x].date}</p></div>
+                </div>
+            </div>`);
             }
-            $(".main_main_events_showcase").append(`
-            <div class="card_event_showcase">
-    <img src="${obj[x].imglink}" class="dontcare">
-    <div class="one_card">
-        <p class="dontcare">${obj[x].tag}</p>
-        <p class="dontcare">${obj[x].date}</p>
-    </div>
-    <div class="right_event">
-        <p class="heading_event_showcase">${obj[x].heading}</p>
-        <p class="event_desc_showcase">${obj[x].desc}</p>
-    </div>
-</div>`);
-            count1++;
         }
-    } else if ($("#eventselect").val() == "20202021") {
-        var obj = JSON.parse(jsonstring2);
-        for (let x in obj) {
-            if (count1 >= 4) {
-                break;
+        else if ($("#eventselect").val() == "20202021") {
+            var obj = JSON.parse(jsonstring2);
+            for (let x in obj) {
+                $(".main_main_events_showcase1").append(`
+                        <div class="card_event_showcase2" onclick="showfull(this,funcccc())">
+                <img src="${obj[x].imglink}" class="laptop">
+                <img src="${obj[x].imglink2}" class="phone">
+                <div class="one_card2">
+                    <p>${obj[x].tag}</p>
+                    <p>${obj[x].date}</p>
+                </div>
+                <div class="right_event2">
+                    <p class="heading_event_showcase2">${obj[x].heading}</p>
+                    <p class="event_desc_showcase2">${obj[x].desc}</p>
+                </div>
+                <div class="responsivedate">
+                    <p class="diffcolor">${obj[x].tag}</p>
+                    <div><p>${obj[x].heading}</p>
+                    <p class="diffcolor">${obj[x].date}</p></div>
+                </div>
+            </div>`);
             }
-            $(".main_main_events_showcase").append(`
-            <div class="card_event_showcase">
-    <img src="${obj[x].imglink}" class="dontcare">
-    <div class="one_card">
-        <p class="dontcare">${obj[x].tag}</p>
-        <p class="dontcare">${obj[x].date}</p>
-    </div>
-    <div class="right_event">
-        <p class="heading_event_showcase">${obj[x].heading}</p>
-        <p class="event_desc_showcase">${obj[x].desc}</p>
-    </div>
-</div>`);
-            count1++;
         }
-    } else if ($("#eventselect").val() == "20192020") {
-        var obj = JSON.parse(jsonstring3);
-        for (let x in obj) {
-            if (count1 >= 4) {
-                break;
+        else if ($("#eventselect").val() == "20192020") {
+            var obj = JSON.parse(jsonstring3);
+            for (let x in obj) {
+                $(".main_main_events_showcase1").append(`
+                        <div class="card_event_showcase2" onclick="showfull(this,funcccc())">
+                <img src="${obj[x].imglink}" class="laptop">
+                <img src="${obj[x].imglink2}" class="phone">
+                <div class="one_card2">
+                    <p>${obj[x].tag}</p>
+                    <p>${obj[x].date}</p>
+                </div>
+                <div class="right_event2">
+                    <p class="heading_event_showcase2">${obj[x].heading}</p>
+                    <p class="event_desc_showcase2">${obj[x].desc}</p>
+                </div>
+                <div class="responsivedate">
+                    <p class="diffcolor">${obj[x].tag}</p>
+                    <div><p>${obj[x].heading}</p>
+                    <p class="diffcolor">${obj[x].date}</p></div>
+                </div>
+            </div>`);
             }
-            $(".main_main_events_showcase").append(`
-            <div class="card_event_showcase">
-    <img src="${obj[x].imglink}" class="dontcare">
-    <div class="one_card">
-        <p class="dontcare">${obj[x].tag}</p>
-        <p class="dontcare">${obj[x].date}</p>
-    </div>
-    <div class="right_event">
-        <p class="heading_event_showcase">${obj[x].heading}</p>
-        <p class="event_desc_showcase">${obj[x].desc}</p>
-    </div>
-</div>`);
-            count1++;
         }
-    } else if ($("#eventselect").val() == "20182019") {
-        var obj = JSON.parse(jsonstring4);
-        for (let x in obj) {
-            if (count1 >= 4) {
-                break;
+        else if ($("#eventselect").val() == "20182019") {
+            var obj = JSON.parse(jsonstring4);
+            for (let x in obj) {
+                $(".main_main_events_showcase1").append(`
+                        <div class="card_event_showcase2" onclick="showfull(this,funcccc())">
+                <img src="${obj[x].imglink}" class="laptop">
+                <img src="${obj[x].imglink2}" class="phone">
+                <div class="one_card2">
+                    <p>${obj[x].tag}</p>
+                    <p>${obj[x].date}</p>
+                </div>
+                <div class="right_event2">
+                    <p class="heading_event_showcase2">${obj[x].heading}</p>
+                    <p class="event_desc_showcase2">${obj[x].desc}</p>
+                </div>
+                <div class="responsivedate">
+                    <p class="diffcolor">${obj[x].tag}</p>
+                    <div><p>${obj[x].heading}</p>
+                    <p class="diffcolor">${obj[x].date}</p></div>
+                </div>
+            </div>`);
             }
-            $(".main_main_events_showcase").append(`
-            <div class="card_event_showcase">
-    <img src="${obj[x].imglink}" class="dontcare">
-    <div class="one_card">
-        <p class="dontcare">${obj[x].tag}</p>
-        <p class="dontcare">${obj[x].date}</p>
-    </div>
-    <div class="right_event">
-        <p class="heading_event_showcase">${obj[x].heading}</p>
-        <p class="event_desc_showcase">${obj[x].desc}</p>
-    </div>
-</div>`);
-            count1++;
         }
-    }
-});
-
-let showfull = (a, b) => {
-    document.querySelector(".fulleventinfo").style.display = "flex";
-    $(".fulleventinfo").empty();
-    fff.style.height = "100vh";
-    fff.style.width = "100vw";
-    fff.style.position = "absolute";
-    fff.style.left = "0";
-    fff.style.top = "0";
-    fff.style.overflow = "hidden";
-    let arrobj = a.children;
-    let imlink = arrobj[0].src;
-    let yy = arrobj[1].children;
-    let yy1 = yy[0].innerHTML; //tag
-    let yy2 = yy[1].innerHTML; //date
-    let zz = arrobj[2].children;
-    let zz1 = zz[0].innerHTML; //heading
-    let zz2 = zz[1].innerHTML; //desc
-    $(".fulleventinfo").append(`
+        $("#eventselect").change(() => {
+            $(".main_main_events_showcase1").empty();
+            if ($("#eventselect").val() == "20212022") {
+                var obj = JSON.parse(jsonstring1);
+                for (let x in obj) {
+                    $(".main_main_events_showcase1").append(`
+                        <div class="card_event_showcase2" onclick="showfull(this,funcccc())">
+                            <img src="${obj[x].imglink}" class="laptop">
+                <img src="${obj[x].imglink2}" class="phone">
+                <div class="one_card2">
+                    <p>${obj[x].tag}</p>
+                    <p>${obj[x].date}</p>
+                </div>
+                <div class="right_event2">
+                    <p class="heading_event_showcase2">${obj[x].heading}</p>
+                    <p class="event_desc_showcase2">${obj[x].desc}</p>
+                </div>
+                <div class="responsivedate">
+                    <p class="diffcolor">${obj[x].tag}</p>
+                    <div><p>${obj[x].heading}</p>
+                    <p class="diffcolor">${obj[x].date}</p></div>
+                </div>
+            </div>`);
+                }
+            }
+            else if ($("#eventselect").val() == "20202021") {
+                var obj = JSON.parse(jsonstring2);
+                for (let x in obj) {
+                    $(".main_main_events_showcase1").append(`
+                        <div class="card_event_showcase2" onclick="showfull(this,funcccc())">
+                <img src="${obj[x].imglink}" class="laptop">
+                <img src="${obj[x].imglink2}" class="phone">
+                <div class="one_card2">
+                    <p>${obj[x].tag}</p>
+                    <p>${obj[x].date}</p>
+                </div>
+                <div class="right_event2">
+                    <p class="heading_event_showcase2">${obj[x].heading}</p>
+                    <p class="event_desc_showcase2">${obj[x].desc}</p>
+                </div>
+                <div class="responsivedate">
+                    <p class="diffcolor">${obj[x].tag}</p>
+                    <div><p>${obj[x].heading}</p>
+                    <p class="diffcolor">${obj[x].date}</p></div>
+                </div>
+            </div>`);
+                }
+            }
+            else if ($("#eventselect").val() == "20192020") {
+                var obj = JSON.parse(jsonstring3);
+                for (let x in obj) {
+                    $(".main_main_events_showcase1").append(`
+                        <div class="card_event_showcase2" onclick="showfull(this,funcccc())">
+                <img src="${obj[x].imglink}" class="laptop">
+                <img src="${obj[x].imglink2}" class="phone">
+                <div class="one_card2">
+                    <p>${obj[x].tag}</p>
+                    <p>${obj[x].date}</p>
+                </div>
+                <div class="right_event2">
+                    <p class="heading_event_showcase2">${obj[x].heading}</p>
+                    <p class="event_desc_showcase2">${obj[x].desc}</p>
+                </div>
+                <div class="responsivedate">
+                    <p class="diffcolor">${obj[x].tag}</p>
+                    <div><p>${obj[x].heading}</p>
+                    <p class="diffcolor">${obj[x].date}</p></div>
+                </div>
+            </div>`);
+                }
+            }
+            else if ($("#eventselect").val() == "20182019") {
+                var obj = JSON.parse(jsonstring4);
+                for (let x in obj) {
+                    $(".main_main_events_showcase1").append(`
+                        <div class="card_event_showcase2" onclick="showfull(this,funcccc())">
+                <img src="${obj[x].imglink}" class="laptop">
+                <img src="${obj[x].imglink2}" class="phone">
+                <div class="one_card2">
+                    <p>${obj[x].tag}</p>
+                    <p>${obj[x].date}</p>
+                </div>
+                <div class="right_event2">
+                    <p class="heading_event_showcase2">${obj[x].heading}</p>
+                    <p class="event_desc_showcase2">${obj[x].desc}</p>
+                </div>
+                <div class="responsivedate">
+                    <p class="diffcolor">${obj[x].tag}</p>
+                    <div><p>${obj[x].heading}</p>
+                    <p class="diffcolor">${obj[x].date}</p></div>
+                </div>
+            </div>`);
+                }
+            }
+        });
+        var fff = document.body;
+        const funcccc = () => {
+            fff.style.height = "unset";
+            fff.style.width = "unset";
+            fff.style.overflowY = "unset";
+            fff.style.position = "unset";
+            fff.style.left = "unset";
+            fff.style.top = "unset";
+        };
+        let showfull = (a, b) => {
+            document.querySelector(".fulleventinfo").style.display = "flex";
+            $(".fulleventinfo").empty();
+            fff.style.height = "100vh";
+            fff.style.width = "100vw";
+            fff.style.position = "absolute";
+            fff.style.left = "0";
+            fff.style.top = "0";
+            fff.style.overflow = "hidden";
+            let arrobj = a.children;
+            let imlink = arrobj[0].src;
+            let yy = arrobj[2].children;
+            let yy1 = yy[0].innerHTML; //tag
+            let yy2 = yy[1].innerHTML; //date
+            let zz = arrobj[3].children;
+            let zz1 = zz[0].innerHTML; //heading
+            let zz2 = zz[1].innerHTML; //desc
+            $(".fulleventinfo").append(`
     <div class="header_all_blogs">
                     <div class="aaaaalalalal">
                         <div class="left_abcd">
@@ -566,7 +634,7 @@ let showfull = (a, b) => {
                         </div>
                     </div>
                 </div>`);
-    $(".fulleventinfo").append(`
+            $(".fulleventinfo").append(`
     <div class="main_thing_fulleventinfo">
                     <div class="main_main_thing_fulleventinfo">
                         <img src="${imlink}">
@@ -581,23 +649,13 @@ let showfull = (a, b) => {
                     </div>
                 </div>
     `);
-    $("#header_go_back_btn_events_main_page").click(() => {
-        document.querySelector(".fulleventinfo").style.display = "none";
-        funcccc();
-    });
-    b();
-};
+            $("#header_go_back_btn_events_main_page").click(() => {
+                document.querySelector(".fulleventinfo").style.display = "none";
+                funcccc();
+            });
+            b();
+        };
+    </script>
+</body>
 
-if ($(window).width() <800) {
-    showfull = (a,b) => {
-        console.log("no");
-    };
-}
-
-$(window).resize(function () {
-    if ($(window).width() <800) {
-        // showfull = (a,b) => {
-        //     console.log("no");
-        // };
-    }   
-});
+</html>
