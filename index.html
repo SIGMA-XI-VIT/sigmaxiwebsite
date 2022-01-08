@@ -555,10 +555,13 @@
             </div>
         </div>
         <div class="one_footer_card4">
-            <form action="#">
+            <form action="#" id="email-newsletter" name="email-newsletter">
                 <p class="centerresponsive">Join a Newsletter</p>
-                <p id="youremail">Your Email</p>
+                <p id="youremail" name="email">Your Email</p>
                 <input type="email" placeholder="Enter Your Email" required>
+                <div class="pop_up" style="margin: 0 auto ; display: none;">
+                    <p align="center">Subscribed!</p>
+                </div>
                 <button type="submit">Subscribe</button>
             </form>
         </div>
@@ -574,7 +577,20 @@
             mirror: true,
         });
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx7BD3jk7XlljC1RnoSitf2PSpw4Flh2RpdgcOy17LDKPh91m9xg2vamTFuj5egW4Yp/exec'
+        const form = document.forms['email-newsletter']
 
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+            document.getElementById("email-newsletter").reset();
+            document.querySelector(".pop_up").style.display = "flex";
+        });
+
+    </script>
 </body>
 
 </html>
