@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="uploadForm" action="https://script.google.com/macros/s/AKfycbwTCXB5dX_qPl19p_nGcxAvsk-TDCcD61LnEgi3Lc5m6VslLwbqluFUSchrDwrlDAbO/exec" method="POST">
+        <input type="hidden" value="" name="fileContent" id="fileContent">
+        <input type="hidden" value="" name="filename" id="filename">
+        <label> Name : </label><input required type="text" value="" name="name" id="name">
+        <label> Email :</label> <input required type="text" value="" name="email" id="email">
+        <label> Contact : </label><input required type="text" value="" name="contact" id="contact">
+        </form>
+        <input required id="attach" name="attach" type="file"/>
+        <input value="Submit" type="button" onclick="UploadFile();" />
+        <script>
+        function UploadFile() {
+        var reader = new FileReader();
+        var file = document.getElementById('attach').files[0];
+        reader.onload = function(){
+        document.getElementById('fileContent').value=reader.result;
+        document.getElementById('filename').value=file.name;
+        document.getElementById('uploadForm').submit();
+        }
+        reader.readAsDataURL(file);
+        }
+        </script>
+</body>
+</html>
