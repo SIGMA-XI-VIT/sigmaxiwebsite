@@ -601,3 +601,210 @@ $(window).resize(function () {
         // };
     }   
 });
+
+
+var teamobjs20222023 = `{
+"obj2":{
+    "imglink":"team_images/rujul.jpeg",
+    "insta_link":"https://www.instagram.com/rujulsrivastava",
+    "linkedin_link":"https://www.linkedin.com/in/rujul-srivastava-5654911b9",
+    "name":"Rujul Srivastava",
+    "position":"Chairperson"
+},
+"obj3":{
+    "imglink":"team_images/krish.jpeg",
+    "insta_link":"https://www.instagram.com/_kri5h92_",
+    "linkedin_link":"https://www.linkedin.com/in/krish-g-jain-1b4709204/",
+    "name":"Krish Jain",
+    "position":"Vice - Chairperson"
+},
+"obj4":{
+    "imglink":"team_images/ananya.jpeg",
+    "insta_link":"https://www.instagram.com/not_a_cursed_child/",
+    "linkedin_link":"https://www.linkedin.com/in/ananya-pantvaidya-715255210/",
+    "name":"Ananya Pantvaidya",
+    "position":"Secretary"
+},
+"obj5":{
+    "imglink":"team_images/anushka.jpeg",
+    "insta_link":"https://www.instagram.com/srivas_anu/",
+    "linkedin_link":"https://www.linkedin.com/in/anushka-srivastava-45bb23207/",
+    "name":"Anushka Srivastava",
+    "position":"Co - Secretary"
+},
+"obj6":{
+    "imglink":"team_images/aaditya.jpeg",
+    "insta_link":"https://www.instagram.com/aadityakumra_",
+    "linkedin_link":"https://www.linkedin.com/in/aaditya-kumra",
+    "name":"Aaditya Kumra",
+    "position":"Research and Development Head"
+},
+"obj7":{
+    "imglink":"team_images/devansh.jpeg",
+    "insta_link":"https://www.instagram.com/devv.ansh",
+    "linkedin_link":"https://www.linkedin.com/in/devansh-sehgal/",
+    "name":"Devansh Sehgal",
+    "position":"Technical Head"
+},
+"obj8":{
+    "imglink":"team_images/kinit.jpeg",
+    "insta_link":"https://www.instagram.com/kinitsai",
+    "linkedin_link":"https://www.linkedin.com/in/kinit-sai-devatha",
+    "name":"Kinit Sai",
+    "position":"Design Head"
+},
+"obj9":{
+    "imglink":"team_images/sabrina.jpeg",
+    "insta_link":"https://www.instagram.com/sabrinamanickam31",
+    "linkedin_link":"https://www.linkedin.com/in/sabrina-manickam",
+    "name":"Sabrina Manickam",
+    "position":"Editorial Head"
+},
+"obj10":{
+    "imglink":"team_images/shreyas.jpeg",
+    "insta_link":"https://www.instagram.com/shrey.ass_",
+    "linkedin_link":"https://www.linkedin.com/in/shreyas-singh-0ab98a208/",
+    "name":"Shreyas Singh",
+    "position":"PR Head"
+},
+"obj11":{
+    "imglink":"team_images/master.jpeg",
+    "insta_link":"https://www.instagram.com/its_master_1",
+    "linkedin_link":"https://www.linkedin.com/in/mastermuskan",
+    "name":"Master Muskan",
+    "position":"Finance Head"
+},
+"obj12":{
+    "imglink":"team_images/saaketh.jpeg",
+    "insta_link":"https://www.instagram.com/saaketh_9616/",
+    "linkedin_link":"https://www.linkedin.com/in/priya-saaketh-madabhushi-2341691bb/",
+    "name":"Priya Saaketh Madabhushi",
+    "position":"Web Lead"
+},
+"obj13":{
+    "imglink":"team_images/durgashree.jpeg",
+    "insta_link":"https://www.instagram.com/durgashree.n15/",
+    "linkedin_link":"https://www.linkedin.com/in/durga-shree-n-87271a1ba/",
+    "name":"Durga Shree N",
+    "position":"Operations Lead"
+}
+}`;
+
+var teamobjs20212022 = `{
+"obj2":{
+    "imglink":"team_images/reva.jpeg",
+    "insta_link":"https://www.instagram.com/reva_0012/",
+    "linkedin_link":"https://www.linkedin.com/in/revamunish/",
+    "name":"Reva Munish",
+    "position":"Chairperson"
+},
+"obj3":{
+    "imglink":"team_images/samabrita.jpg",
+    "insta_link":"https://www.instagram.com/samabrita_biswas/",
+    "linkedin_link":"https://www.linkedin.com/in/samabritabiswas/",
+    "name":"Samabrita Biswas",
+    "position":"Secretary"
+},
+"obj4":{
+    "imglink":"team_images/vaibhav.jpg",
+    "insta_link":"https://www.instagram.com/vaibhav_dh/",
+    "linkedin_link":"https://www.linkedin.com/in/vaibhav-dhirendra/",
+    "name":"Vaibhav Dhirendra",
+    "position":"Vice Chairperson"
+},
+"obj5":{
+    "imglink":"team_images/shakti.jpeg",
+    "insta_link":"https://www.instagram.com/shakthit_01/",
+    "linkedin_link":"https://www.linkedin.com/in/shakthi-thanigaivel/",
+    "name":"Shakthi T",
+    "position":"Editorial Head"
+},
+"obj6":{
+    "imglink":"images/team1.png",
+    "insta_link":"https://www.instagram.com/_anish.pattnaik_/",
+    "linkedin_link":"https://www.linkedin.com/in/anish-pattnaik-b41994196/",
+    "name":"Anish Pattnaik",
+    "position":"Design Head"
+},
+"obj7":{
+    "imglink":"images/team1.png",
+    "insta_link":"https://www.instagram.com/vicek_s/",
+    "linkedin_link":"https://www.linkedin.com/in/vivek-sinha-780b1b1a4/",
+    "name":"Vivek Sinha",
+    "position":"Program Chair"
+},
+"obj8":{
+    "imglink":"team_images/priyanshu.jpeg",
+    "insta_link":"https://www.instagram.com/priyanshu5378/",
+    "linkedin_link":"https://www.linkedin.com/in/priyanshu-raj-5a37381a3/",
+    "name":"Priyanshu Raj",
+    "position":"Technical Head"
+},
+"obj9":{
+    "imglink":"images/team1.png",
+    "insta_link":"https://www.instagram.com/poorneshadhithya/",
+    "linkedin_link":"https://www.linkedin.com/in/poorneshadhithya/",
+    "name":"Poornesh Adhithya",
+    "position":"Technical Head"
+},
+"obj10":{
+    "imglink":"images/team1.png",
+    "insta_link":"https://www.instagram.com/satyampadhi/",
+    "linkedin_link":"https://www.linkedin.com/in/satyam-padhi-3315b91a3/",
+    "name":"Satyam Padhi",
+    "position":"PR Head"
+},
+"obj11":{
+    "imglink":"images/team1.png",
+    "insta_link":"https://www.instagram.com/somilkuchhal/",
+    "linkedin_link":"https://www.linkedin.com/in/somilkuchhal/",
+    "name":"Somil Kuchhal",
+    "position":"Finance Head"
+}
+}
+`;
+
+
+document.getElementById("teamselect").addEventListener('change',() => {
+    $(".our_team_main").empty();
+    if(document.getElementById("teamselect").value=="20222023"){
+        var obj2022 = JSON.parse(teamobjs20222023);
+        for(var x in obj2022){
+            $(".our_team_main").append(`
+            <div class="card_our_team">
+                    <img src="${obj2022[x].imglink}">
+                    <a href="${obj2022[x].linkedin_link}" target="blank">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="${obj2022[x].insta_link}" target="blank">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">${obj2022[x].name}</p>
+                        <p class="role_our_team">${obj2022[x].position}</p>
+                    </div>
+                </div>
+            `);
+        }
+    }
+    else if(document.getElementById("teamselect").value=="20212022"){
+        var obj2021 = JSON.parse(teamobjs20212022);
+        for(var x in obj2021){
+            $(".our_team_main").append(`
+            <div class="card_our_team">
+                    <img src="${obj2021[x].imglink}">
+                    <a href="${obj2021[x].linkedin_link}" target="blank">
+                        <ion-icon name="logo-linkedin" class="linkboard"></ion-icon>
+                    </a>
+                    <a href="${obj2021[x].insta_link}" target="blank">
+                        <ion-icon name="logo-instagram" class="instaboard"></ion-icon>
+                    </a>
+                    <div>
+                        <p class="heading_div_team">${obj2021[x].name}</p>
+                        <p class="role_our_team">${obj2021[x].position}</p>
+                    </div>
+                </div>
+            `);
+        }
+    }
+});

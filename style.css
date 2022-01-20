@@ -872,6 +872,7 @@ body{
     flex-direction: column;
     background-color: #fff;
     border-radius: 5px;
+    overflow: hidden;
 }
 .dontcareteam{
     width: 20vw;
@@ -880,6 +881,7 @@ body{
 
 .card_our_team img{
     max-height: 80%;
+    border-radius: inherit inherit 0 0;
 }
 .our_team_main{
     width: 90vw;
@@ -1086,7 +1088,55 @@ body{
         right: 0;
     }
 }*/
+.formdiv{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formdiv form{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+}
+.formdiv form input{
+    margin: 2vh 0;
+    padding: 8px;
+    border-radius:8px;
+    border: 0;
+    outline: 0;
+    font-weight: 500;
+}
+#attach{
+    cursor: pointer;
+    color: #fff;
+}
+#form_submit_btn{
+    background-color: #F6CF00;
+    color: #121212;
+    cursor: pointer;
+}
+.submit_blog_div{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit_blog_div a{
+    cursor: pointer;
+}
+.submit_blog_div a button{
+    font-weight: 500;
+    background-color: #fff;
+    color: #121212;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    cursor: pointer;
 
+}
 @media(max-width:800px){
     .dontcareteam{
         display: none;
@@ -1279,9 +1329,21 @@ body{
     .allblogs{
         height: max-content;
     }
-    .card_our_team{
-        width: 40vw;
+    .our_team{
         height: max-content;
+    }
+    .card_our_team{
+        overflow: hidden;
+        width: 40vw;
+        height: 30vh;
+        margin: 2vh 0;
+    }
+    .card_our_team img{
+        height: 78%;
+        border-radius: inherit inherit 0 0;
+    }
+    .card_our_team div{
+        flex-basis: 25%;
     }
     .heading_div_team{
         width: 100%;
@@ -1290,7 +1352,9 @@ body{
         text-align: center;
     }
     .role_our_team{
+        text-align: center;
         margin-bottom: 1vh;
+        padding-bottom: 1vh;
         font-size: x-small;
     }
     .teammenu{
@@ -1336,13 +1400,10 @@ body{
         font-size: large;
     }
     .linkboard{
-        top: 2%;
+        top: 7%;
     }
     .instaboard{
         top: 20%;
-    }
-    .our_team{
-        height: 140vh;
     }
     .one_footer_card3 div{
         margin-top: 1vh;
