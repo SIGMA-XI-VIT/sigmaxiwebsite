@@ -628,9 +628,11 @@ body{
 }
 .showmorediv button{
     font-family: 'Montserrat', sans-serif;
-    padding: 8px;
+    padding: 10px 15px;
     border: 0;
     outline: 0;
+    margin-left: 6px;
+    width: 100%;
     cursor: pointer;
     background-color: #F6CF00;
     color: #121212;
