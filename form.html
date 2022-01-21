@@ -48,6 +48,7 @@
         </div>
         <div class="formdiv">
             
+        <div id="submission"></div>
         <form id="uploadForm" action="https://script.google.com/macros/s/AKfycbwTCXB5dX_qPl19p_nGcxAvsk-TDCcD61LnEgi3Lc5m6VslLwbqluFUSchrDwrlDAbO/exec" method="POST">
             <h1 style="color: #ffd504; margin-bottom: 25px;">Submit A Guest Article</h1>
             <input type="hidden" value="" name="fileContent" id="fileContent" />
@@ -64,10 +65,13 @@
                 var reader = new FileReader();
                 var file = document.getElementById("attach").files[0];
                 reader.onload = function () {
-                    document.getElementById("fileContent").in =
-                        reader.result;
-                    document.getElementById("filename").value = file.name;
+                    // document.getElementsById("submission").in =
+                    //     reader.result;
+                    // document.getElementById("filename").value = file.name;
                     document.getElementById("uploadForm").submit();
+                    const element = document.getElementById("uploadForm")
+                    element.style.visibility = "hidden";
+                    document.getElementById("submission").innerHTML = "Blog Submission Successful";
 
                 };
                 reader.readAsDataURL(file);

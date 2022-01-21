@@ -328,7 +328,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 5px solid #F6CF00;
+    border: 5px solid #f6cf00;
     flex-basis: 40%;
     border-radius: 15px;
 }
@@ -612,6 +612,14 @@ body{
     padding: 8px 8px 0px 8px;
     font-size: large;
     font-weight: 500;
+}
+
+#submission{
+    background: #121212;
+    color: #f6cf00;
+    font-size: xx-large;
+    text-align: center;
+    width: 100vw;
 }
 
 .heading_event_showcase2{
