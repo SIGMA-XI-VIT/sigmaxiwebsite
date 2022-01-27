@@ -579,7 +579,9 @@ body{
     height: 22vh;
     background-color: #081F32;
 }
-
+.display-none{
+display:none;
+}
 
 .one_card,.one_card2{
     width: 100%;
