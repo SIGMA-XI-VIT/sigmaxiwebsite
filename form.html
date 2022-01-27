@@ -73,6 +73,7 @@
                     element.style.visibility = "hidden";
                     document.getElementById("submission").classList.remove("display-none")
                     document.getElementById("submission").innerHTML = "Blog Submission Successful";
+                    element.classList.add("display-none")
 
                 };
                 reader.readAsDataURL(file);
