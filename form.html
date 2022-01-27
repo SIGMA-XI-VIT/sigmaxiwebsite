@@ -72,7 +72,7 @@
                     const element = document.getElementById("uploadForm")
                     document.getElementById("submission").classList.remove("display-none")
                     document.getElementById("submission").innerHTML = "Blog Submission Successful";
-                    element.classList.add("display-none")
+                    element.style.display="none"
 
                 };
                 reader.readAsDataURL(file);
