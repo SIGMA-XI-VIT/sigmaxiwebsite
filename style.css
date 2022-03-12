@@ -619,7 +619,7 @@ body{
     color: #f6cf00;
     font-size: xx-large;
     text-align: center;
-    width: 100vw;
+    
 }
 
 .heading_event_showcase2{
@@ -1122,10 +1122,13 @@ body{
     cursor: pointer;
     color: #fff;
 }
-#form_submit_btn{
+.form_submit_btn{
     background-color: #F6CF00;
     color: #121212;
     cursor: pointer;
+    padding: 10px 5px;
+    border-color: #F6CF00;
+    border-radius: 10px;
 }
 .submit_blog_div{
     width: 100vw;

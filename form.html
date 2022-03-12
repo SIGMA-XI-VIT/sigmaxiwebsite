@@ -49,7 +49,7 @@
         <div class="formdiv">
             
         <div id="submission"></div>
-        <form id="uploadForm" action="https://script.google.com/macros/s/AKfycbwTCXB5dX_qPl19p_nGcxAvsk-TDCcD61LnEgi3Lc5m6VslLwbqluFUSchrDwrlDAbO/exec" method="POST">
+        <form id="uploadForm" action="https://script.google.com/macros/s/AKfycbw_bUiDEojsytl3ksS74eW6I8vsn68QmWsRqAZyLJQhzq8gGtcQnzV3RjPBLZMKQm30/exec" method="POST">
             <h1 style="color: #ffd504; margin-bottom: 25px;">Submit A Guest Article</h1>
             <input type="hidden" value="" name="fileContent" id="fileContent" />
             <input type="hidden" value="" name="filename" id="filename" />
@@ -57,28 +57,38 @@
             <input required type="text" value="" name="email" id="email" placeholder="Enter Your Email"/>
             <input required type="text" value="" name="contact" id="contact" placeholder="Enter Your Contact No."/>
             <input required id="attach" name="attach" type="file"/>
-            <input value="Submit" type="button" onclick="UploadFile();" id="form_submit_btn"/>
+            <button class="form_submit_btn"type="submit">Submit</button>
         </form>
     </div>
-        <script>
-            function UploadFile() {
-                var reader = new FileReader();
-                var file = document.getElementById("attach").files[0];
-                reader.onload = function () {
-                    // document.getElementsById("submission").in =
-                    //     reader.result;
-                    // document.getElementById("filename").value = file.name;
-                    document.getElementById("uploadForm").submit();
-                    const element = document.getElementById("uploadForm")
-                    element.style.visibility = "hidden";
-                    document.getElementById("submission").innerHTML = "Blog Submission Successful";
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbzDodXsft48adv_50TYu6sAIpzpKuf4630o59_-0CQNeIf-RxYcg4iMw0Ip5OmOUgcU/exec"
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        UploadFile();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(window.open('https://sigmaxivit.com/'))
+        .catch(error => console.error('Error!', error.message))
+        
+        document.getElementById("uploadForm").reset();
+    });
+        function UploadFile() {
+            var reader = new FileReader();
+            var file = document.getElementById("attach").files[0];
+            // reader.onload = function () {
+            //     // document.getElementsById("fileContent").in =
+            //     //     reader.result;
+            //     // document.getElementById("filename").value = file.name;
+            //     document.getElementById("uploadForm").submit();
+            //     const element = document.getElementById("uploadForm")
+            //     element.style.visibility = "hidden";
+            //     document.getElementById("submission").innerHTML = "Blog Submission Successful";
 
-                };
-                reader.readAsDataURL(file);
-            }
-            document.getElementById("header_go_back_btn_form").addEventListener('click',() => {
-                window.history.back();
-            });
-        </script>
+            // };
+            reader.readAsDataURL(file);
+        }
+        document.getElementById("header_go_back_btn_form").addEventListener('click',() => {
+            window.history.back();
+        });
+    </script>
     </body>
 </html>
